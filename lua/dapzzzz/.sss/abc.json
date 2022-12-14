@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "test",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMycode": true,
+      "test": "${input:ii}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "ii",
+      "type": "pickString",
+      "description": "yes",
+      "default": "ii",
+      "options": ["111", "112"]
+    }
+  ]
+}
