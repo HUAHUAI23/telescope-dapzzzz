@@ -20,7 +20,7 @@ end
 function Dapzzzz:start(opts)
 	opts = opts or {}
 	-- vim.loop.cwd()
-	opts.cwd = opts.cwd or vim.fn.getcwd()
+	opts.cwd = vim.fn.getcwd()
 	local confp = vim.fn.input(opts.cwd .. [[/ +: ]], "")
 	if confp ~= "" then
 		opts.cwd = opts.cwd .. "/" .. confp

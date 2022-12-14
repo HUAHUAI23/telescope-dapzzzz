@@ -2,6 +2,7 @@ local Dapzzzz = require("dapzzzz")
 local dapzzzz
 local opts = {}
 return require("telescope").register_extension({
+	-- NOTE:
 	setup = function(ext_config, config)
 		-- access extension config and user config
 		ext_config = ext_config or {}
@@ -13,7 +14,7 @@ return require("telescope").register_extension({
 	end,
 	exports = {
 		dap23 = function()
-			dapzzzz:start({})
+			dapzzzz:start(opts)
 		end,
 	},
 })
