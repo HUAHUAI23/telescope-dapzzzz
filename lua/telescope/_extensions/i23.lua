@@ -13,7 +13,7 @@ return require("telescope").register_extension({
 	end,
 	exports = {
 		dap23 = function()
-			dapzzzz:start(opts)
+			dapzzzz:start({})
 		end,
 	},
 })
