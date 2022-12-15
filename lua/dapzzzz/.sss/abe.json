@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "abctest",
+      "type": "attach",
+      "request": "request",
+      "program": "${file}",
+      "console": "internalConsole",
+      "justMycode": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "tt",
+      "type": "promptString",
+      "description": "description",
+      "default": "iiii"
+    }
+  ]
+}

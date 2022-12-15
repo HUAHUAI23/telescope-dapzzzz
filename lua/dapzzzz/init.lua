@@ -24,9 +24,12 @@ function Dapzzzz:start(opts)
 	local confp = vim.fn.input(opts.cwd .. [[/ +: ]], "")
 	if confp ~= "" then
 		opts.cwd = opts.cwd .. "/" .. confp
+		print(opts.cwd)
 	else
 		-- NOTE: default is .vscode
 		opts.cwd = opts.cwd .. "/" .. ".vscode"
+		print(2)
+		print(opts.cwd)
 	end
 	-- TODO: remove hidden files
 	opts.find_command = opts.find_command or { "ls", "-a" }
