@@ -32,11 +32,11 @@ function Dapzzzz:start(opts)
 	opts.find_command = opts.find_command or { "ls", "-a" }
 	-- make file icon (make_entry.gen_from_file(opts))
 	opts.entry_maker = opts.entry_maker or make_entry.gen_from_file(opts)
-	opts.previewer = conf.file_previewer(opts)
 	pickers
 		.new(opts, {
 			prompt_title = "load DAP configure",
 			finder = finders.new_oneshot_job(opts.find_command, opts),
+			previewer = conf.file_previewer(opts),
 			sorter = conf.file_sorter(opts),
 			attach_mappings = function(prompt_bufnr, map)
 				map(
