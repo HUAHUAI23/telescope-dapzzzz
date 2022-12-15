@@ -51,7 +51,12 @@ input your configuration file directory, `/path/of/project/.vscode` is default
 
 ---
 
+https://user-images.githubusercontent.com/43649186/207799361-6c1dc087-ec3d-4650-8798-e5de947e6afb.mp4
+
+
 ## some luasnip snippet
+
+---
 
 ```lua
 {
