@@ -24,22 +24,19 @@ function Dapzzzz:start(opts)
 	local confp = vim.fn.input(opts.cwd .. [[/ +: ]], "")
 	if confp ~= "" then
 		opts.cwd = opts.cwd .. "/" .. confp
-		print(opts.cwd)
 	else
 		-- NOTE: default is .vscode
 		opts.cwd = opts.cwd .. "/" .. ".vscode"
-		print(2)
-		print(opts.cwd)
 	end
 	-- TODO: remove hidden files
 	opts.find_command = opts.find_command or { "ls", "-a" }
 	-- make file icon (make_entry.gen_from_file(opts))
 	opts.entry_maker = opts.entry_maker or make_entry.gen_from_file(opts)
+	opts.previewer = conf.file_previewer(opts)
 	pickers
 		.new(opts, {
 			prompt_title = "load DAP configure",
 			finder = finders.new_oneshot_job(opts.find_command, opts),
-			previewer = conf.file_previewer(opts),
 			sorter = conf.file_sorter(opts),
 			attach_mappings = function(prompt_bufnr, map)
 				map(
